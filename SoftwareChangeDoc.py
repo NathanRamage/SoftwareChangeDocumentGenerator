@@ -50,7 +50,7 @@ class AdminDetails:
     """
     return self._devName
 
-  def setDavName(self, value):
+  def setDevName(self, value):
     """Sets the Developer's name.
 
     Args:
