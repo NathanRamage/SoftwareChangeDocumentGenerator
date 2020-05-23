@@ -1,4 +1,5 @@
 from docx import Document
+import changeLog
 import sys
 import getopt
 
@@ -50,7 +51,7 @@ class AdminDetails:
     """
     return self._devName
 
-  def setDavName(self, value):
+  def setDevName(self, value):
     """Sets the Developer's name.
 
     Args:
@@ -118,6 +119,9 @@ def gen_doc(inputFile, outputFile, adminDetails):
 
   # Set the branch
   columnCells[4].text = adminDetails.getBranch()
+
+  # Get changeLog
+  changeLog.RunCommand("cat test/clearcaseTest.txt")
 
   document.save(outputFile)
 
